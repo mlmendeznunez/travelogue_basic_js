@@ -16,10 +16,11 @@ $(document).ready(function() {
     var inputtedCity = $("input#new-city").val();
     var inputtedCountry = $("input#new-country").val();
     var inputtedRating = $("input#new-rating").val();
-    var inputtedSeason = $("input#new-season").val();
+    var inputtedStart = $("input#new-start").val();
+    var inputtedEnd = $("input#new-end").val();
     var inputtedCompanions = $("input#new-companions").val();
     var inputtedFood = $("input#new-food").val();
-    var newLocation = { city: inputtedCity, country: inputtedCountry, rating: inputtedRating, season: inputtedSeason, companions: inputtedCompanions, food: inputtedFood, activities: [] };
+    var newLocation = { city: inputtedCity, country: inputtedCountry, rating: inputtedRating, start: inputtedStart, end: inputtedEnd, companions: inputtedCompanions, food: inputtedFood, activities: [] };
 
       /* Add another activity for your location */
     $(".new-detail").each(function() {
@@ -43,11 +44,11 @@ $(document).ready(function() {
     /* Show information for the location that is clicked */
     $(".location").last().click(function() {
       $("#show-location").show();
-      $("#show-location h2");
       $(".city").text(newLocation.city);
       $(".country").text(newLocation.country);
       $(".rating").text(newLocation.rating);
-      $(".season").text(newLocation.season);
+      $(".start").text(newLocation.start);
+      $(".end").text(newLocation.end);
       $(".companions").text(newLocation.companions);
       $(".food").text(newLocation.food);
 
@@ -61,7 +62,8 @@ $(document).ready(function() {
     $("input#new-city").val("");
     $("input#new-country").val("");
     $("input.new-rating").val("");
-    $("input.new-season").val("");
+    $("input.new-start").val("");
+    $("input.new-end").val("");
     $("input.new-companions").val("");
     $("input.new-food").val("");
     $("input.new-activity").val("");

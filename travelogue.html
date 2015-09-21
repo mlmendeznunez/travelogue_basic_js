@@ -29,9 +29,12 @@
                 <input type="number" min="1" max="5" class="form-control new-rating" id="new-rating">
               </div>
 
-              <div class="form-group">
-                <label for="new-season">Your Trip's Season</label>
-                <input type="text" class="form-control new-season" id="new-season">
+                <div class="form-group">
+                  <label for="new-start">Start</label>
+                  <input type="date" class="new-start" id="new-start">
+
+                  <label for="new-end">End</label>
+                  <input type="date" class="new-end" id="new-end">
               </div>
 
               <div class="form-group">
@@ -57,22 +60,22 @@
               <span class="btn btn-default" id="add-activity">Another activity</span>
               <button type="submit" class="btn btn-primary">Submit</button>
             </form>
+          </div>
+
+
+          <div class="col-md-6">
 
             <h2>Locations:</h2>
             <ul id="locations">
 
             </ul>
-          </div>
-          <div class="col-md-6">
+
             <div id="show-location">
-              <h2></h2>
-                <ul>
-                    <li>Location: <span class="city"></span>, <span class="country"></span></li>
-                    <li>Rating: <span class="rating"></span></li>
-                    <li>Season: <span class="season"></span></li>
-                    <li>Travel buddies: <span class="companions"></span></li>
-                    <li>Food: <span class="food"></span></li>
-                </ul>
+              <h2><span class="city"></span>, <span class="country"></span></h2>
+                <p>Rating: <span class="rating"></span><br>
+                  From: <span class="start"></span> until: <span class="end"></span><br>
+                  Travel buddies: <span class="companions"></span><br>
+                  Food: <span class="food"></span></p>
               <p>Activities:</p>
                 <ul id="details">
 
