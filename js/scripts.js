@@ -2,12 +2,11 @@ $(document).ready(function() {
 
 /* Form to add additional details to a location */
   $("#add-activity").click(function() {
-      $(".new-detail").append('<div class="new-detail">' +
-                                  '<div class="form-group">' +
+      $(".new-detail").append(    '<div class="form-group">' +
                                   '<label for="new-activity">Activity</label>'+
                                   '<input type="text" class="form-control new-activity">' +
-                                  '</div>' +
-                                '</div>');
+                                  '</div>'
+                                );
   });
 
 /* Form to add a location */
@@ -23,7 +22,7 @@ $(document).ready(function() {
     var newLocation = { city: inputtedCity, country: inputtedCountry, rating: inputtedRating, season: inputtedSeason, companions: inputtedCompanions, food: inputtedFood, activities: [] };
 
       /* Add another activity for your location */
-    $("#new-detail").each(function() {
+    $(".new-detail").each(function() {
       var inputtedActivity = $(this).find("input.new-activity").val();
       var newActivity = { activity: inputtedActivity };
 
@@ -53,6 +52,7 @@ $(document).ready(function() {
       $(".food").text(newLocation.food);
 
       $("ul#details").text("");
+      debugger;
       newLocation.activities.forEach(function(detail) {
         $("ul#details").append("<li>" + detail.activity + "</li>");
       });
