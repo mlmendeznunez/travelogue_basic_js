@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 /* Form to add additional details to a location */
-  $("#add-details").click(function() {
+  $("#add-activity").click(function() {
       $(".new-detail").append('<div class="new-detail">' +
                                   '<div class="form-group">' +
                                   '<label for="new-activity">Activity</label>'+
@@ -44,10 +44,13 @@ $(document).ready(function() {
     /* Show information for the location that is clicked */
     $(".location").last().click(function() {
       $("#show-location").show();
-      $("#show-location h2").text(newLocation.city);
+      $("#show-location h2");
       $(".city").text(newLocation.city);
       $(".country").text(newLocation.country);
-      // todo: add more info here
+      $(".rating").text(newLocation.rating);
+      $(".season").text(newLocation.season);
+      $(".companions").text(newLocation.companions);
+      $(".food").text(newLocation.food);
 
       $("ul#details").text("");
       newLocation.activities.forEach(function(detail) {
