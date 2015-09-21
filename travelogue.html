@@ -26,23 +26,24 @@
 
               <div class="form-group">
                 <label for="new-rating">Rate your trip! From 1 to 5</label>
-                <input type="number" min="1" max="5" class="form-control new-rating">
+                <input type="number" min="1" max="5" class="form-control new-rating" id="new-rating">
               </div>
 
               <div class="form-group">
                 <label for="new-season">Your Trip's Season</label>
-                <input type="text" class="form-control new-season">
+                <input type="text" class="form-control new-season" id="new-season">
               </div>
 
               <div class="form-group">
                 <label for="new-companions">Travel Buddies</label>
-                <input type="text" class="form-control new-companions">
+                <input type="text" class="form-control new-companions" id="new-companions">
               </div>
 
               <div class="form-group">
                 <label for="new-food">Favorite Food</label>
-                <input type="text" class="form-control new-food">
+                <input type="text" class="form-control new-food" id="new-food">
               </div>
+
 
               <div id="new-details">
                 <div class="new-detail">
@@ -65,10 +66,14 @@
           <div class="col-md-6">
             <div id="show-location">
               <h2></h2>
-
-              <p>Location: <span class="city"></span>, <span class="country"></span></p>
-              <!-- add more info -->
-              <p>Details:</p>
+                <ul>
+                    <li>Location: <span class="city"></span>, <span class="country"></span></li>
+                    <li>Rating: <span class="rating"></span></li>
+                    <li>Season: <span class="season"></span></li>
+                    <li>Travel buddies: <span class="companions"></span></li>
+                    <li>Food: <span class="food"></span></li>
+                </ul>
+              <p>Activities:</p>
                 <ul id="details">
 
                 </ul>
