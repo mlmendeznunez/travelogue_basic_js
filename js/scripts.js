@@ -52,7 +52,6 @@ $(document).ready(function() {
       $(".food").text(newLocation.food);
 
       $("ul#details").text("");
-      debugger;
       newLocation.activities.forEach(function(detail) {
         $("ul#details").append("<li>" + detail.activity + "</li>");
       });
